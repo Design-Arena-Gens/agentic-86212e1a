@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheezon Ki List - Aasan Tareeqe Se</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            direction: ltr;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #667eea;
+        }
+
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .items-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .item-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-card:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            transform: rotate(45deg);
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .item-number {
+            display: inline-block;
+            background: white;
+            color: #f5576c;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .item-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .item-description {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 3px solid #667eea;
+        }
+
+        .footer p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .item-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎒 Cheezon Ki List</h1>
+            <p>Har cheez ko aasan tareeqe se samjhein!</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <h2>🌟 Yeh Kya Hai?</h2>
+                <p>
+                    Beta, yeh ek <span class="highlight">shopping list</span> hai jismein alag alag cheezon ke baare mein bataya gaya hai.
+                    Har cheez ka naam, uski miqdar (kitni chahiye), aur woh kya hoti hai - sab kuch aasaan urdu mein!
+                </p>
+            </div>
+
+            <div class="items-grid">
+                <div class="item-card">
+                    <div class="item-number">1</div>
+                    <div class="item-title"><span class="emoji">🌱</span>Nitrate Waali Mitti</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 3« gallons (bahut saari mitti)<br>
+                        <strong>Yeh Kya Hai:</strong> Yeh ek khaas qism ki mitti hai jismein "nitrate" naam ka chemical hota hai. Yeh zaraati khetiyon ya purani jagahon se mil sakti hai.
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">2</div>
+                    <div class="item-title"><span class="emoji">🔥</span>Lakdi Ki Raakh</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> « cup (aadha cup jitni)<br>
+                        <strong>Yeh Kya Hai:</strong> Jab lakdi jal jati hai to jo bhuri powder jaisi cheez bach jati hai, usey raakh kehte hain. Bilkul waise jaise angeethion mein hoti hai!
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">3</div>
+                    <div class="item-title"><span class="emoji">🪣</span>Baalti</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 1 baalti (4-5 gallons waali)<br>
+                        <strong>Yeh Kya Hai:</strong> Ek bara dabba ya baalti jismein hum paani ya doosri cheezon rakhtey hain. Bilkul waise jaise nahane ya safai ke liye istemaal hoti hai!
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">4</div>
+                    <div class="item-title"><span class="emoji">🧵</span>Kapre Ke 2 Tukre</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 2 tukre (baalti ki taali se thore bare)<br>
+                        <strong>Yeh Kya Hai:</strong> Bahut maheen kapra jo chaan-ne (filter) ke kaam aata hai. Jaise chai chaan-ne waala kapra!
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">5</div>
+                    <div class="item-title"><span class="emoji">🍽️</span>Chauri Plate Ya Taal</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 1 taal (baalti jitna bara)<br>
+                        <strong>Yeh Kya Hai:</strong> Ek chauri aur choti gehrai waali dish, jaise paraat ya bara taal jismein khana pakaate hain.
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">6</div>
+                    <div class="item-title"><span class="emoji">🔥</span>Garmi Bardasht Karne Waala Bartan</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 1 dabba (chaura aur halka gehra)<br>
+                        <strong>Yeh Kya Hai:</strong> Ek khaas bartan jo garmi se kharab nahi hota. Jaise steel ka patila ya lohe ka bartan jo chulhe par rakh sakte hain.
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">7</div>
+                    <div class="item-title"><span class="emoji">💧</span>Paani</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 2 gallons (2 bari bottles jitna)<br>
+                        <strong>Yeh Kya Hai:</strong> Saaf paani jo hum peete hain ya istemal karte hain. 2 gallons matlab taqreeban 8 litre!
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">8</div>
+                    <div class="item-title"><span class="emoji">🔨</span>Baalti Mein Chhed Karne Ka Saamaan</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 1 cheez<br>
+                        <strong>Yeh Kya Hai:</strong> Koi bhi tool jisse baalti ki taali mein chote chote surakh kar sakein. Jaise mismar, drill ya tikka!
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">9</div>
+                    <div class="item-title"><span class="emoji">🍷</span>Alcohol (Sharaab)</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 1 gallon (1 bari bottle)<br>
+                        <strong>Yeh Kya Hai:</strong> Koi bhi qism ki alcohol. Yeh ek liquid hai jo bahut jaldi bhap ban jata hai. Chemical kaam ke liye istemaal hota hai.
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-number">10</div>
+                    <div class="item-title"><span class="emoji">🔥</span>Garmi Ka Zariya</div>
+                    <div class="item-description">
+                        <strong>Kitni Chahiye:</strong> 1 zariya<br>
+                        <strong>Yeh Kya Hai:</strong> Koi bhi cheez jo garmi/aag de sake. Jaise chulha, gas stove, ya heater - jis par cheezein garam kar sakein!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                <strong>📝 Yaad Rakho:</strong> Yeh saari cheezon agar ikhathi karni hon to pehle bade logon se pooch lena!<br>
+                Kuch cheezon (jaise alcohol aur aag) ko sambhal ke istemaal karna chahiye! 🙏
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.item-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.transform = 'translateY(20px)';
+
+                        setTimeout(() => {
+                            entry.target.style.transition = 'all 0.6s ease';
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+</body>
+</html>
